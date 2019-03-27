@@ -25,7 +25,7 @@ public class testJDBC_GUI {
 
         button = new Button("execute");
         textArea = new TextArea(25, 70);
-        
+
         frame.add(textField);
         frame.add(button);
         frame.add(textArea);
