@@ -9,7 +9,7 @@ public class testJDBC_GUI {
     private TextField textField;
     private Button button;
     private TextArea textArea;
-    private Dialog dialog;
+    private Dialog dialog;` `
     private Label label;
     private Button okbutton;
 
