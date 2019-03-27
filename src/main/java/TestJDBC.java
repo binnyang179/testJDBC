@@ -1,13 +1,15 @@
 import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.util.Scanner;
 
 public class TestJDBC {
-    static Connection connection = null;
-    static java.sql.Statement Statement = null;
+    private static Connection connection = null;
+    private PreparedStatement preparedStatement;
+    private ResultSet resultSet;
+    private static Scanner scanner;
+    private static SimpleDateFormat simpleDateFormat;
+    private String sqlToExecute;
 
-    public static void main(String[] args) {
-        initDB();
-
-    }
 
     public static void initDB() {
         String URL = "jdbc:mysql://127.0.0.1:3306";
@@ -16,21 +18,22 @@ public class TestJDBC {
         try {
 //            Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(URL+"?user="+user+"&password="+password+"&useSSL=false");
-            Statement = connection.createStatement();
-            PreparedStatement preparedStatement = connection.prepareStatement("show databases");
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                System.out.println(resultSet.getString(1));
-            }
             System.out.println("Initial success");
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public static void createDB() {
-        String a = "create database test";
+    public static void getSQL() {
 
     }
+
+
+    public static void main(String[] args) {
+        initDB();
+
+    }
+
+
 
 }

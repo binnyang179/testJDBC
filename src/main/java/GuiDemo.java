@@ -17,8 +17,7 @@ public class GuiDemo {
 
         my_awt.setVisible(true);
 
-        System.out.println("Hello " +
-                "world");
+        System.out.println("Hello world");
     }
 }
 
