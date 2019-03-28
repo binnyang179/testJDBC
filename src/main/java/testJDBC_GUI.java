@@ -9,7 +9,7 @@ public class testJDBC_GUI {
     private TextField textField;
     private Button button;
     private TextArea textArea;
-    private Dialog dialog;` `
+    private Dialog dialog;
     private Label label;
     private Button okbutton;
 
@@ -25,6 +25,7 @@ public class testJDBC_GUI {
 
         button = new Button("execute");
         textArea = new TextArea(25, 70);
+        textArea.setEditable(false);
 
         frame.add(textField);
         frame.add(button);
